@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudMonitor | Cluster Observability</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">C</div>
+        <div>
+          <strong>CloudMonitor</strong>
+          <span>CLUSTER OBSERVABILITY</span>
+        </div>
+      </div>
+
+      <p class="nav-caption">WORKSPACE</p>
+      <nav id="mainNav">
+        <button class="nav-link active" data-page="overview"><span class="nav-icon">▦</span> Overview</button>
+        <button class="nav-link" data-page="pods"><span class="nav-icon">◫</span> Pods <span id="podNavCount" class="nav-count">—</span></button>
+        <button class="nav-link" data-page="metrics"><span class="nav-icon">⌁</span> Metrics</button>
+        <button class="nav-link" data-page="services"><span class="nav-icon">◎</span> Services</button>
+        <button class="nav-link" data-page="alerts"><span class="nav-icon">♧</span> Alerts <span id="alertNavCount" class="nav-count">—</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <span class="live-dot"></span>
+        <div>Monitoring workspace<small>CloudMonitor · Kubernetes</small></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="breadcrumbs">CLUSTER <span>/</span> <b id="crumb">OVERVIEW</b></div>
+        <div class="topbar-actions">
+          <span id="sourceBadge" class="source-badge">CONNECTING</span>
+          <button id="refreshBtn" class="button button-secondary">↻ Refresh</button>
+        </div>
+      </header>
+
+      <div id="pageContent">
+        <div class="loading-panel">Connecting to CloudMonitor API…</div>
+      </div>
+
+      <footer class="footer">
+        <span>CloudMonitor</span>
+        <span id="lastUpdated">Waiting for metrics</span>
+        <span id="apiState" class="api-state">● Connecting</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
